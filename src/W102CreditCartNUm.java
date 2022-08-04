@@ -14,8 +14,9 @@ public class W102CreditCartNUm {
         //request  cart number
         W102CreditCartNUm obj=new W102CreditCartNUm();
        // long cart_number=obj.prompt();
-        System.out.println("enter the credit number: ");
+
         do {
+            System.out.println("enter the credit number: ");
            cartInput = obj.prompt();
         } while (obj.valid_cart(cartInput));
         obj.check(cartInput);
