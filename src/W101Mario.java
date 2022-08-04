@@ -2,28 +2,25 @@ import java.util.Scanner;
 
 public class W101Mario {
     static Scanner scan = new Scanner(System.in);
-   static int height;
-
+    static int height;
     public static void main(String[] args) {
 
-             Build(prompt());
+        do{
+            prompt();
+        } while (height < 0 || height > 9);
+        Build(height);
 
     }
+    public static void prompt() {
 
+        System.out.println("enter the height: ");
+         height = scan.nextInt();
 
-    public static int prompt() {
-
-        do {
-            System.out.println("enter the height: ");
-            height = scan.nextInt();
-        } while (height <= 0||height>9);
-        return height;
     }
-
-    public static void Build(int height) {
-        int i, j,hashes;
-        for (i =1; i <=height ; i++) {
-            for (j =i; j <= height; j++) {
+    public static void Build(int h) {
+        int i, j;
+        for (i =1; i <=h ; i++) {
+            for (j =i; j <= h; j++) {
                 System.out.print("  ");
             }
             for(j=1;j<=i;j++){
@@ -38,8 +35,7 @@ public class W101Mario {
         }
     }
 
-
-        }
+}
 
 
 
